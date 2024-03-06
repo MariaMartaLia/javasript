@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicional</title>
+</head>
+<body>
+    <h1>Trabalhando com If e Else</h1>
+    <h2>Verificando a velocidade</h2>
+   <p>Velocidade</p>
+ <input type="number" name="txtv" id="txtv">
+ <input type="button" value="Verificar" onclick="calcular()">
+ <div id="resu"></div>
+ <script>
+    function calcular(){
+var txtv = window.document.querySelector('input#txtv')
+var resu = window.document.querySelector('div#resu')
+var res = Number(txtv.value)
+resu.innerHTML = `<p>Sua velocidade é ${res} Km/h</p>`
+if (res >60) {
+    resu.innerHTML = ` <p>Você ultrapassou a velocidade permitida! MULTADO!!!!!!</p>`}
+    resu.innerHTML += `<p> Dirija sempre com cuidado!</p>`
+    }
+    </script>
+</body>
+</html>
